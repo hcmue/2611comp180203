@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Layout</title>
+    <!--Chèn CSS ở đây-->
+    <!--Chèn thư viện-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!--Chèn cái do mình định nghĩa-->
+    <link rel="stylesheet" href="Layout.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!--Header-->
+        <header id="myheader">
+            <h1>FIT-HCMUE Shop</h1>
+            <h2>Shopping everywhere</h2>
+            <img id="img-header" src="images/header-object.png" />
+        </header>
+        <!--/Header-->
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Dropdown</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">English</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tiếng Việt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/NavBar-->
+
+        <!--Content-->
+        <div class="row m-0">
+            <main class="col-lg-9 col-md-8 col-xs-12 mycontent"></main>
+            <aside class="col-lg-3 col-md-4 col-xs-12 mycontent">
+                <div class="card mt-2">
+                    <div class="card-header">Giỏ hàng</div>
+                    <div class="card-body">Content</div>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-header">Danh mục</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="#">Phone</a>
+                            </li>
+                            <li class="list-group-item">Tablet</li>
+                            <li class="list-group-item">Computer</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-header">Tìm kiếm</div>
+                    <div class="card-body">Content</div>
+                </div>
+            </aside>
+        </div>
+        <!--/Content-->
+
+        <!--Footer-->
+        <!--/Footer-->
+    </div>
+
+    <!--Chèn JS ở đây-->
+</body>
+
+</html>

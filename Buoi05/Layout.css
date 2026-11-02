@@ -1,0 +1,5 @@
+/* Layout.css */
+#myheader{height: 120px; background-color: beige;position: relative;}
+#img-header{position: absolute; bottom: 0; right: 0; height: 100%;}
+.mycontent{min-height: 400px; border: 1px solid blue;}
+.list-group-item a{text-decoration: none;}
