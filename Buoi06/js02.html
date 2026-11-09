@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calculateDiscount(price, percent) {
+            if (percent > 0.5 || percent < 0) {
+                alert("Giảm giá không hợp lệ");
+                return;
+            }
+            return price * (1 - percent);
+        }
+
+        //test
+        console.log(calculateDiscount(111, 0.9));
+        console.log(calculateDiscount(111, 0.5));
+        console.log(calculateDiscount(111, -2));
+        console.log(calculateDiscount(111, 0.45));
+    </script>
+</body>
+
+</html>

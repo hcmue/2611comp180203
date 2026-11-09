@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Tên SP</td>
+            <td>Đơn giá</td>
+            <td>Số lượng</td>
+            <td></td>
+            <td>Thành tiền</td>
+        </tr>
+        <tr>
+            <td><input id="tensp"></td>
+            <td><input type="number" id="dongia"></td>
+            <td><input type="number" id="soluong" onblur="tinhThanhTien()"></td>
+            <td><button type="button" onclick="tinhThanhTien()">=</button></td>
+            <td id="thanhtien"></td>
+        </tr>
+    </table>
+    <script>
+        function tinhThanhTien() {
+            let donGiaEle = document.getElementById("dongia");
+            if (donGiaEle === null || parseFloat(donGiaEle.value <= 0)){
+                alert("Đơn giá không hợp lệ");
+                return;
+            }
+            let donGia = parseFloat(donGiaEle.value);
+            let soLuong = parseInt(document.getElementById("soluong").value);
+            document.getElementById("thanhtien").innerHTML = donGia * soLuong;
+        }
+    </script>
+</body>
+
+</html>
