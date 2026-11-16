@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Thêm/Sửa Sản phẩm</legend>
+        Id: <input id="productId" /><br />
+        Name: <input id="productName" /><br />
+        Price: <input id="productPrice" type="number" /><br />
+        <button onclick="capNhatSanPham()">Lưu</button>
+    </fieldset>
+    <script>
+        const layDsSanPham = () => JSON.parse(localStorage.getItem("products")) || [];
+
+        const capNhatDsSanPham = (data) => {
+            localStorage.setItem("products", JSON.stringify(data));
+        }
+
+        function capNhatSanPham(){
+            let proId = document.querySelector("#productId").value;
+            let proName = document.querySelector("#productName").value;
+            let proPrice = document.getElementById("productPrice").value;
+            let dsSanPham = layDsSanPham();
+            let prod = dsSanPham.find(p => p.id == proId);
+            if (prod === undefined) {
+                dsSanPham.push({
+                    id: proId, name: proName, price: proPrice
+                });
+                capNhatDsSanPham(dsSanPham);
+            }
+        }
+    </script>
+</body>
+</html>
