@@ -13,11 +13,24 @@
         Price: <input id="productPrice" type="number" /><br />
         <button onclick="capNhatSanPham()">Lưu</button>
     </fieldset>
+
+    <div id="result"></div>
     <script>
         const layDsSanPham = () => JSON.parse(localStorage.getItem("products")) || [];
 
         const capNhatDsSanPham = (data) => {
             localStorage.setItem("products", JSON.stringify(data));
+        }
+
+        const hienThiSanPhamDeSua = (id) => {alert(`Sửa ${id}`)}
+        const xoaSanPham = (id) => {alert(`Xóa ${id}`)}
+
+        const displayProducts = () => {
+            let chuoi = "";
+            layDsSanPham().forEach(item => {
+                chuoi += `<div>${item.id} - ${item.name} - ${item.price} <button type="button" onclick="hienThiSanPhamDeSua(${item.id})">Sửa</button><button type="button" onclick="xoaSanPham(${item.id})">Xóa</button></div>`;                
+            });
+            document.getElementById("result").innerHTML = chuoi;
         }
 
         function capNhatSanPham(){
@@ -31,8 +44,11 @@
                     id: proId, name: proName, price: proPrice
                 });
                 capNhatDsSanPham(dsSanPham);
+                displayProducts();
             }
         }
+
+        displayProducts(); //load đầu tiên
     </script>
 </body>
 </html>
